@@ -1,0 +1,509 @@
+@font-face {
+    font-family: 'Cookie-Regular';
+    src: url('font/Cookie-Regular.ttf');
+}
+
+@media only screen and (max-width: 450px) {
+    #container {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        width: 360px;
+        border: solid 2px red; 
+        border-radius: 20px; 
+        overflow-y: hidden;
+    }
+
+    .post-image {
+        width: 340px; 
+        margin-left: 10px;
+    }
+
+    #post-section {
+        height: 400px;
+        overflow-y: scroll;
+    }
+
+    #bottom-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 10px;
+    }
+    
+    .search-input {
+        width: 310px;
+        border: none;
+        background-color: #dedede;
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    #search-container {
+        padding: 20px 0 5px 10px;
+        height: 509px;
+        overflow-y: hidden;
+    }
+
+    .coffee-header {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 350px;
+    }
+
+    .coffee-img {
+        width: 340px;
+        margin-bottom: 10px;
+    }
+
+    .profile-posts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+        overflow: hidden;
+    }
+
+    .profile-posts-container {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 0;
+        margin-top: 10px;
+        overflow-y: scroll;
+        height: 430px;
+    }
+    
+    .profile-posts-img {
+        height: 110px;
+    }
+}
+
+@media only screen and (min-width: 451px) {
+    #container {
+        display: flex;
+        justify-content: center;
+        flex-flow: row-reverse;
+        overflow-y: hidden;
+        
+    }
+
+    .post-image {
+        width: 700px; 
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #post-section {
+        height: 90vh;
+        overflow-y: scroll;
+    }
+
+    #bottom-buttons {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        margin: 20px 150px 20px 0;
+    }
+
+    .search-input {
+        width: 90%;
+        border: none;
+        background-color: #dedede;
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    #search-container {
+        padding: 20px 0 5px 10px;
+        height: 90vh;
+        overflow-y: hidden;
+        width: 700px;
+    }
+
+    .coffee-header {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 700px;
+    }
+
+    .coffee-img {
+        width: 700px;
+        margin-bottom: 10px;
+    }
+
+    .profile-posts-container {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 0;
+        margin-top: 10px;
+        overflow-y: scroll;
+        height: 90vh;
+        width: 690px;
+    }
+
+    .profile-posts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    .profile-posts-img {
+        height: 230px;
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+
+dialog {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 10px;
+    border: none;
+    border-radius: 25px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+textarea {
+    border: 1px solid #dedede;
+    height: 30px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.post-icon-heart {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.post-icon-heart-red {
+    fill: red;
+}
+.post-description{
+    margin-left: 10px;
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    font-family: Cookie-Regular;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+#post-section::-webkit-scrollbar {
+    display: none;
+}
+
+.post {
+    border-top: 1px solid #dedede;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+}
+
+.post-username{
+    display: flex;
+    align-items: center;
+}
+
+.post-pfp {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.post-ellipsis, .post-icon-right {
+    display: flex;
+    align-items: center;
+    height: 15px;
+}
+
+.post-icon-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.post-likes-container {
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.post-likes-text {
+    position: absolute;
+    left: 60px;
+    top: 5px;
+}
+
+.post-comment {
+    margin: 10px;
+}
+
+.post-comment-img {
+    cursor: pointer;
+}
+
+.post-tag {
+    color: blue;
+}
+
+.search-hastag-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.search-hastag {
+    background-color: #dedede;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.search-result::-webkit-scrollbar {
+    display: none;
+}
+
+#search-result {
+    overflow-y: scroll;
+    height: 90vh;
+}
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 0 10px;
+    height: 514px;
+    overflow-y: hidden;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.profile-header-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 5px 10px;
+}
+
+.profile-username {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.profile-icons {
+    height: 20px;
+}
+
+.profile-pfp-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pfp {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.profile-pfp-img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-stats-text-top {
+    font-size: 16px;
+
+}
+
+.profile-stats-text-bottom {
+    font-size: 12px;
+}
+
+.profile-posts-container::-webkit-scrollbar{
+    display: none;
+}
+
+#cafe-container h1 {
+    margin-left: 10px;
+}
+
+#cafe-list::-webkit-scrollbar {
+    display: none;
+}
+
+#cafe-list {
+    height: 85vh;
+    overflow-y: scroll;
+}
+
+.coffee-post {
+    display: flex;
+    flex-flow: column;
+    margin: 0 10px 10px 10px;
+}
+
+.coffee-post-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.coffee-icons {
+    width: 25px;
+    cursor: pointer;
+}
+
+.bottom-buttons-icons {
+    height: 20px;
+}
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+
+  .modal-header span {
+    font-size: 20px;
+
+  }
+
+  .modal-body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .modal-body button {
+    border-radius: 5px;
+    background-color: #dedede;
+    width: 100px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    width: 300px; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
