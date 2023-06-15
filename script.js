@@ -3,6 +3,7 @@ function showPosts(counter) {
     let liked;
     if (counter) {
         let offset = counter * 3;
+        console.log('Ceci est un test.');
         url = 'https://insta-api-api.0vxq7h.easypanel.host/posts?limit=3&offset=' + offset;
     } else {
         url = 'https://insta-api-api.0vxq7h.easypanel.host/posts?limit=3';
